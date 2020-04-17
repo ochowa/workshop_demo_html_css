@@ -42,7 +42,9 @@ ul.menu {
     flex-direction: row;
     justify-content: space-around;
     margin-right: 90px;
+
 }
+
 
 
 li a {
@@ -504,3 +506,59 @@ li a:hover {
     text-decoration: none;
 }
 
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+
+.info h2 {
+    font-family: Raleway;
+    font-size: 40px;
+}
+.info p {
+    font-family: Open Sans;
+    font-size: 12px;
+}
+
+.email, .phone {
+    font-family: "Open Sans";
+    font-size: 12px;
+    color: #A5A5A5;
+}
+
+.phone img {
+    width: 20px;
+    height: 20px;
+}
+.email img {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid grey;
+
+}
+
+#fname, #email {
+    color: #08A6E4;
+    text-transform: uppercase;
+    font-family: "Open Sans";
+    font-weight: bold;
+}
+
+.footer {
+    width: 100%;
+    margin-top: 100px;
+    background: #F7F7F7 no-repeat;
+    box-shadow: 0px -5px 40px #00000029;
+}
