@@ -250,8 +250,48 @@ li a:hover {
 
 }
 
+.second-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 1125px;
+    height: 370px;
+    margin: 25px auto 25px auto;
+    padding: 30px;
+    background-color: #FFFFFF;
+}
 
-.content .why-row .second-row-info   {
+.second-row-img img {
+    width: 386px;
+    height: 219px;
+    z-index: 3;
+    position: relative;
+
+}
+.second-row:first-of-type {
+    padding: 100px 30px;
+}
+.second-row-img {
+    position: relative;
+}
+
+.second-row-img > div {
+    position: relative;
+}
+.second-row-img > div::after {
+    content: " ";
+    position: absolute;
+    left: -10%;
+    top: -5%;
+    background-color: #07ACE6;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    z-index: 2;
+
+}
+
+.content .second-row .second-row-info   {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
