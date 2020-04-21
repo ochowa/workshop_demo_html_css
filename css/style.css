@@ -11,7 +11,6 @@ root {
 
 body {
     font-family: "Raleway";
-    padding-bottom: 50px;
 }
 
 header {
@@ -19,13 +18,15 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
     width: 100%;
     height: 70px;
     margin: 0 auto;
-    background: #FFFFFF);
+    background: #FFFFFF;
     border-bottom: solid rgba(255,255,255,0.2) 1px;
     box-shadow: 0px 3px 6px #00000029;
     opacity: 1;
+    z-index: 999;
 }
 
 .logo {
@@ -180,7 +181,7 @@ li a:hover {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 1395px;
+    height: 1300px;
     background: #F7F7F7 no-repeat;
 }
 
@@ -340,13 +341,14 @@ li a:hover {
 }
 
 .third-row-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 440px;
     height: 370px;
     background-color: #55DFB4;
 }
 .third-row-img img {
-    display: block;
-    margin: auto;
     width: 296px;
     height: 208px;
 
@@ -427,7 +429,7 @@ li a:hover {
 
     border: #55DFB4 solid 1px;
     border-radius: 10px;
-    padding: 40px;
+    padding: 20px;
 }
 
 .header {
@@ -436,34 +438,6 @@ li a:hover {
     font-weight: bold;
     margin: 20px;
 }
-
-
-/*.first-column .amount {*/
-/*    font-size: 30px;*/
-/*    font-family: Open Sans;*/
-/*    font-weight: lighter;*/
-/*    color: #FB3B64;*/
-/*    margin-top: 10px;*/
-/*    margin-bottom: 40px;*/
-/*}*/
-
-/*.second-column .amount {*/
-/*    font-size: 30px;*/
-/*    font-family: Open Sans;*/
-/*    font-weight: lighter;*/
-/*    color: #07ACE6;*/
-/*    margin-top: 10px;*/
-/*    margin-bottom: 10px;*/
-/*}*/
-
-/*.third-column .amount {*/
-/*    font-size: 30px;*/
-/*    font-family: Open Sans;*/
-/*    font-weight: lighter;*/
-/*    color: #55DFB4;*/
-/*    margin-top: 10px;*/
-/*    margin-bottom: 10px;*/
-/*}*/
 
 .pricing-table .amount {
     font-size: 30px;
@@ -503,6 +477,13 @@ li a:hover {
     margin-bottom: 30px;
     color: gray;
 }
+.pricing-table ul {
+    transition: all .2s ease-in-out;
+}
+
+.pricing-table ul:hover {
+    transform: scale(1.1);
+}
 
 .pricing-table li {
     font-size: 10px;
@@ -510,13 +491,19 @@ li a:hover {
     margin: 7px;
 }
 
+.button {
+    cursor: pointer;
+}
+
 .first-column .button {
+    position: relative;
+    bottom: -40px;
     width: 120px;
     background: #EB476E no-repeat;
     border-radius: 17px;
     text-align: center;
     padding: 10px;
-    margin-top: 35px;
+    border: #FB3B64 solid 1px;
 }
 
 .first-column .button a {
@@ -525,13 +512,25 @@ li a:hover {
     text-decoration: none;
 }
 
+.first-column .button:hover {
+    background: #FFFFFF no-repeat;
+    border: #FB3B64 solid 1px;
+}
+
+.first-column .button:hover a {
+    color: #FB3B64;
+}
+
 .second-column .button {
+    position: relative;
+    bottom: -60px;;
     width: 120px;
     background: #07ACE6 no-repeat;
     border-radius: 17px;
     text-align: center;
     padding: 10px;
-    margin-top: 53px;
+    border: #07ACE6 solid 1px;
+
 }
 
 .second-column .button a {
@@ -540,19 +539,40 @@ li a:hover {
     text-decoration: none;
 }
 
+.second-column .button:hover {
+    background: #FFFFFF no-repeat;
+    border: #07ACE6 solid 1px;
+}
+
+.second-column .button:hover a {
+    color: #07ACE6;
+}
+
 .third-column .button {
+    position: relative;
+    bottom: -40px;
     width: 120px;
     background: #55DFB4 no-repeat;
     border-radius: 17px;
     text-align: center;
     padding: 10px;
-    margin-top: 25px;
+    border: #55DFB4 solid 1px;
+
 }
 
 .third-column .button a {
     font: bold 10px Open Sans;
     color: #FFFFFF;
     text-decoration: none;
+}
+
+.third-column .button:hover {
+    background: #FFFFFF no-repeat;
+    border: #55DFB4 solid 1px;
+}
+
+.third-column .button:hover a {
+    color: #55DFB4;
 }
 
 .contact {
@@ -588,7 +608,7 @@ li a:hover {
 
 
 
-input[type=text] {
+.form input[type="text"] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -598,16 +618,113 @@ input[type=text] {
 
 }
 
-#fname, #email {
+.form label[for="fname"], .form label[for="email"] {
     color: #08A6E4;
     text-transform: uppercase;
     font-family: "Open Sans";
     font-weight: bold;
+    font-size: 11px;
+    letter-spacing: 2px;
 }
 
+.form label[for="checkbox"] {
+    padding-left: 10px;
+    color: #707070;
+    font-size: 12px;
+    font-family: "Open Sans";
+
+}
+
+.form-button {
+    position: relative;
+    width: 150px;
+    background: #08A6E4 no-repeat;
+    border-radius: 17px;
+    text-align: center;
+    padding: 10px;
+    border: #08A6E4 solid 1px;
+    cursor: pointer;
+}
+
+.form-button a {
+    font: bold 10px Open Sans;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.form-button:hover{
+    background: #FFFFFF no-repeat;
+    border: #08A6E4 solid 1px;
+}
+
+.form-button:hover a {
+    color: #08A6E4;
+}
+
+
 .footer {
+    display: flex;
+    flex-direction: row;
+
     width: 100%;
+    height: 90px;
     margin-top: 100px;
     background: #F7F7F7 no-repeat;
     box-shadow: 0px -5px 40px #00000029;
+}
+
+.copyright {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    width: 100%;
+    margin-left: 100px;
+}
+
+.copyright h4 {
+    font-family: Raleway;
+    font-size: 26px;
+    font-weight: lighter;
+    color: #08A6E4;
+    margin-bottom: 5px;
+}
+
+.copyright p {
+    font-family: "Open Sans";
+    font-size: 11px;
+    color: #A5A5A5;
+}
+
+.social-media-icons {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    margin-right: 100px;
+
+}
+
+.social-media-icons a {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    overflow: hidden;
+    text-indent: -999px;
+    transition: all .1s ease-in-out;
+}
+.social-media-icons .twitter {
+    background: url("../assets/Twitter.svg") no-repeat center center;
+}
+
+.social-media-icons .facebook {
+    background: url("../assets/Facebook.svg") no-repeat center center;
+}
+
+
+.social-media-icons a:hover {
+    opacity: 0.9;
+    transform: scale(1.1);
 }
