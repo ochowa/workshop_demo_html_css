@@ -97,8 +97,14 @@ li a:hover {
     color: #FFFFFF;
     text-decoration: none;
     padding: 20px 0;
-
 }
+
+.button-open-shop:hover {
+    background: #FFFFFF no-repeat;
+    border: #08A6E4 solid 1px;
+    color: #08A6E4;
+}
+
 
 .sales {
     width: 100%;
@@ -288,8 +294,6 @@ li a:hover {
     width: 350px;
     height: 350px;
     border-radius: 50%;
-    z-index: 2;
-
 }
 
 .content .second-row .second-row-info   {
@@ -578,35 +582,64 @@ li a:hover {
 .contact {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     margin-top: 100px;
+    width: 750px;
+    margin-left: 250px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: baseline;
+    width: 300px;
+    margin-top: 50px;
 }
 
 .info h2 {
     font-family: Raleway;
-    font-size: 40px;
+    font-size: 30px;
+    margin-bottom: 20px;
+
 }
 .info p {
     font-family: Open Sans;
-    font-size: 12px;
+    font-size: 10px;
+    margin-bottom: 20px;;
 }
 
-.email, .phone {
+.contact-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
     font-family: "Open Sans";
-    font-size: 12px;
+    font-size: 10px;
     color: #A5A5A5;
 }
 
-.phone img {
-    width: 20px;
-    height: 20px;
+.email {
+    margin: 10px;
 }
-.email img {
+
+.phone {
+    margin: 5px;
+}
+
+.contact-info img {
     width: 20px;
     height: 20px;
 }
 
-
+.form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    position: relative;
+    width: 450px;
+    margin-top: 50px;
+}
 
 .form input[type="text"] {
     width: 100%;
@@ -627,12 +660,44 @@ li a:hover {
     letter-spacing: 2px;
 }
 
-.form label[for="checkbox"] {
-    padding-left: 10px;
-    color: #707070;
-    font-size: 12px;
-    font-family: "Open Sans";
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
 
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    border-radius: 5px;
+    background: #fff;
+    border: 1px solid #eeee;
+    outline: none;
+}
+
+.checkmark-rodo:checked {
+    background-color: #ffff;
+    border: 1px solid #adb8c0;
+}
+
+.checkmark-rodo:checked:after {
+    content: '\2714';
+    font-size: 14px;
+    position: absolute;
+    top: 0px;
+    left: 3px;
+    color: #08A6E4;
+}
+
+.checktext {
+    margin-left: 2em;
+    display: block;
+    position: relative;
+    margin-top: -1.5em;
+    margin-bottom: 1.5em;
+    line-height: 1.4em;
+    font-size: 12px;
 }
 
 .form-button {
@@ -642,6 +707,7 @@ li a:hover {
     border-radius: 17px;
     text-align: center;
     padding: 10px;
+    left: 20px;
     border: #08A6E4 solid 1px;
     cursor: pointer;
 }
